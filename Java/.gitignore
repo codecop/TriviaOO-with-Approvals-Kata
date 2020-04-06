@@ -1,0 +1,13 @@
+target/
+
+.project
+.settings/
+.classpath
+.checkstyle
+.pmd
+
+.idea/
+*.iml
+*.iwr
+
+*.received.*
