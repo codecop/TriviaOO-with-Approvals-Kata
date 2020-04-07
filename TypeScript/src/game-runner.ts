@@ -3,20 +3,18 @@ import { Game } from './game';
 export class GameRunner {
     public static main(random): void {
         const game = new Game();
-        game.add("Chet");
-        game.add("Pat");
-        game.add("Sue");
+        game.getAdd("Chet").execute();
+        game.getAdd("Pat").execute();
+        game.getAdd("Sue").execute();
 
         let notAWinner;
         do {
 
-            game.roll(Math.floor(random() * 6) + 1);
+            const roll = game.getRoll().create(random);
+            roll.execute();
 
-            if (Math.floor(random() * 10) == 7) {
-                notAWinner = game.wrongAnswer();
-            } else {
-                notAWinner = game.wasCorrectlyAnswered();
-            }
+            const answer = game.getAnswer().create(random);
+            notAWinner = answer.execute();
 
         } while (notAWinner);
     }

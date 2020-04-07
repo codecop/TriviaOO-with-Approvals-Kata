@@ -8,7 +8,6 @@ import { PlayerNames } from "./player-names";
 import { Purses } from "./purses";
 import { QuestionsByCategory } from "./questions-by-category";
 
-
 export class Roll extends Base implements Action {
 
     private roll: number;

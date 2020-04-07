@@ -31,9 +31,9 @@ export class ActionFactory extends Base {
             isGettingOutOfPenaltyBox);
     }
 
-    public create(rand): Action {
+    public create(random): Action {
         let action: Action;
-        if (rand.nextInt(9) === 7) {
+        if (Math.floor(random() * 10) == 7) {
             action = this.wrongAnswer();
         } else {
             action = this.wasCorrectlyAnswered();
@@ -42,7 +42,7 @@ export class ActionFactory extends Base {
     }
 
     public wasCorrectlyAnswered(): Action {
-        const factory: CorrectFactory = new CorrectFactory(this.currentPlayer,
+        const factory = new CorrectFactory(this.currentPlayer,
             this.names,
             this.places,
             this.purses,

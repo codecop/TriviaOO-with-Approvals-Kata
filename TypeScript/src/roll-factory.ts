@@ -8,6 +8,7 @@ import { Places } from "./places";
 import { PlayerNames } from "./player-names";
 import { Purses } from "./purses";
 import { QuestionsByCategory } from "./questions-by-category";
+import { Roll } from "./roll";
 
 export class RollFactory extends Base {
 
@@ -30,8 +31,8 @@ export class RollFactory extends Base {
             isGettingOutOfPenaltyBox);
     }
 
-    public create(rand: any): Action {
-        const roll: number = this.calcRoll(rand);
+    public create(random): Action {
+        const roll: number = this.calcRoll(random);
         if (this.penaltyBox.isIn()) {
             const factory: PenaltyBoxRollFactory = new PenaltyBoxRollFactory(this.currentPlayer,
                 this.names,
@@ -56,7 +57,7 @@ export class RollFactory extends Base {
         }
     }
 
-    private calcRoll(rand: any): number {
-        return rand.nextInt(5) + 1;
+    private calcRoll(random): number {
+        return Math.floor(random() * 6) + 1;
     }
 }

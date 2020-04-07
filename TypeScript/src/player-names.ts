@@ -1,5 +1,4 @@
 import { CurrentPlayer } from "./current-player";
-import { Object } from "./object";
 import { Players } from "./players";
 
 export class PlayerNames extends Players {
@@ -12,7 +11,7 @@ export class PlayerNames extends Players {
     }
 
     public get(): any {
-        return this.elements.get(this.currentPlayer.get());
+        return this.elements[this.currentPlayer.get()];
     }
 
     public println(): void {

@@ -1,12 +1,15 @@
 import { Categories } from "./categories";
-import { Questions } from "./questions";
+import { PopQuestions } from "./pop-questions";
+import { RockQuestions } from "./rock-questions";
+import { ScienceQuestions } from "./science-questions";
+import { SportsQuestions } from "./sports-questions";
 
 export class QuestionsByCategory {
 
-    popQuestions: Questions = new PopQuestions();
-    scienceQuestions: Questions = new ScienceQuestions();
-    sportsQuestions: Questions = new SportsQuestions();
-    rockQuestions: Questions = new RockQuestions();
+    popQuestions = new PopQuestions();
+    scienceQuestions = new ScienceQuestions();
+    sportsQuestions = new SportsQuestions();
+    rockQuestions = new RockQuestions();
 
     private categories: Categories;
 

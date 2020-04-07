@@ -1,6 +1,6 @@
 export class Array6<T> {
 
-    private array: any[] = [null, null, null, null, null, null];
+    private array = [null, null, null, null, null, null];
 
     public constructor(init: T) {
         for (let i = 0; i < 6; i++) {

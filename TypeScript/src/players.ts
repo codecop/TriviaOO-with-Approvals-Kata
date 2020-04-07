@@ -1,9 +1,9 @@
 export class Players {
 
-    elements: any[] = [];
+    elements = [];
 
     public add(playerName: string): void {
-        this.elements.add(playerName);
+        this.elements.push(playerName);
     }
 
     public println(): void {
@@ -12,7 +12,7 @@ export class Players {
     }
 
     private printlnAdded(): void {
-        console.log(this.elements.getLast() + " was added");
+        console.log(this.elements[this.elements.length - 1] + " was added");
     }
 
     private printlnNum(): void {
@@ -20,7 +20,7 @@ export class Players {
     }
 
     public count(): number {
-        return this.elements.size();
+        return this.elements.length;
     }
 
 }

@@ -1,15 +1,17 @@
 export class Questions {
 
-    popQuestions: any[] = [];
+    popQuestions = [];
 
     public constructor(prefix: string) {
         for (let i = 0; i < 50; i++) {
-            this.popQuestions.addLast(prefix + " Question " + i);
+            this.popQuestions.push(prefix + " Question " + i);
         }
     }
 
     public askQuestion(): void {
-        console.log(this.popQuestions.removeFirst());
+        const question = this.popQuestions[0];
+        this.popQuestions = this.popQuestions.slice(1);
+        console.log(question);
     }
 
 }
