@@ -33,18 +33,18 @@ export class Correct extends Base implements Action {
         this.println();
         this.purses.inc();
 
-        const winner: boolean = this.didPlayerWin();
+        var winner: boolean = this.didPlayerWin();
         this.currentPlayer.inc();
 
         return winner;
     }
 
     private println(): void {
-        console.log("Answer was corrent!!!!");
+        console.log("Answer was correct!!!!");
     }
 
     private didPlayerWin(): boolean {
-        return !(this.purses.current() === 6);
+        return !(this.purses.current() == 6);
     }
 
 }

@@ -39,7 +39,7 @@ export class Wrong extends Base implements Action {
     }
 
     private println(): void {
-        console.log("Question was incorrectly answered");
+        console.log('Question was incorrectly answered');
         this.penaltyBox.println();
     }
 }

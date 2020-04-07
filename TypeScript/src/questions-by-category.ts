@@ -18,13 +18,13 @@ export class QuestionsByCategory {
     }
 
     public ask(): void {
-        if (this.categories.currentCategory() === "Pop")
+        if (this.categories.currentCategory() == 'Pop')
             this.popQuestions.askQuestion();
-        if (this.categories.currentCategory() === "Science")
+        if (this.categories.currentCategory() == 'Science')
             this.scienceQuestions.askQuestion();
-        if (this.categories.currentCategory() === "Sports")
+        if (this.categories.currentCategory() == 'Sports')
             this.sportsQuestions.askQuestion();
-        if (this.categories.currentCategory() === "Rock")
+        if (this.categories.currentCategory() == 'Rock')
             this.rockQuestions.askQuestion();
     }
 

@@ -37,7 +37,7 @@ export class PenaltyBoxRollFactory extends Base {
     }
 
     public create(): Action {
-        if (this.roll % 2 !== 0) {
+        if (this.roll % 2 != 0) {
             return new GettingOutRoll(this.currentPlayer,
                 this.names,
                 this.places,

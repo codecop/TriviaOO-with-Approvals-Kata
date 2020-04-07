@@ -34,7 +34,7 @@ export class InPenaltyBox extends Base implements Action {
             this.println();
             this.purses.inc();
 
-            const winner: boolean = this.didPlayerWin();
+            var winner = this.didPlayerWin();
             this.currentPlayer.inc();
 
             return winner;
@@ -49,7 +49,7 @@ export class InPenaltyBox extends Base implements Action {
     }
 
     private didPlayerWin(): boolean {
-        return !(this.purses.current() === 6);
+        return !(this.purses.current() == 6);
     }
 
 }

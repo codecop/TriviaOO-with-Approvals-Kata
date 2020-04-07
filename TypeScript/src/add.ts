@@ -39,8 +39,8 @@ export class Add extends Base implements Action {
     }
 
     public execute(): boolean {
-        this.players.add(this.playerName);
-        this.names.add(this.playerName);
+        this.players.push(this.playerName);
+        this.names.push(this.playerName);
         this.places.set(this.players.count(), 0);
         this.purses.set(this.players.count(), 0);
         this.penaltyBox.set(this.players.count(), false);

@@ -14,8 +14,8 @@ export class CurrentPlayer {
     }
 
     public inc(): void {
-        this.currentPlayer = this.currentPlayer + 1;
-        if (this.currentPlayer === this.players.count()) this.currentPlayer = 0;
+        this.currentPlayer += 1;
+        if (this.currentPlayer == this.players.count()) this.currentPlayer = 0;
     }
 
 }

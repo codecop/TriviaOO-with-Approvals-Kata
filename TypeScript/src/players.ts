@@ -1,8 +1,8 @@
 export class Players {
 
-    elements = [];
+    elements: Array<string> = [];
 
-    public add(playerName: string): void {
+    public push(playerName: string): void {
         this.elements.push(playerName);
     }
 
