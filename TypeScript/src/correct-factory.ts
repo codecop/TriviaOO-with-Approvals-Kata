@@ -1,18 +1,16 @@
 import { Action } from "./action";
 import { Base } from "./base";
 import { Categories } from "./categories";
-import { CurrentPlayer } from "./current_player";
-import { GettingOutRoll } from "./getting_out_roll";
-import { PenaltyBox } from "./penalty_box";
-import { PenaltyBoxRoll } from "./penalty_box_roll";
+import { Correct } from "./correct";
+import { CurrentPlayer } from "./current-player";
+import { InPenaltyBox } from "./in-penalty-box";
+import { PenaltyBox } from "./penalty-box";
 import { Places } from "./places";
-import { PlayerNames } from "./player_names";
+import { PlayerNames } from "./player-names";
 import { Purses } from "./purses";
-import { QuestionsByCategory } from "./questions_by_category";
+import { QuestionsByCategory } from "./questions-by-category";
 
-export class PenaltyBoxRollFactory extends Base {
-
-    private roll: number;
+export class CorrectFactory extends Base {
 
     public constructor(
         currentPlayer: CurrentPlayer,
@@ -22,8 +20,7 @@ export class PenaltyBoxRollFactory extends Base {
         penaltyBox: PenaltyBox,
         categories: Categories,
         questions: QuestionsByCategory,
-        isGettingOutOfPenaltyBox: boolean[],
-        roll: number) {
+        isGettingOutOfPenaltyBox: boolean[]) {
         super(currentPlayer,
             names,
             places,
@@ -32,31 +29,27 @@ export class PenaltyBoxRollFactory extends Base {
             categories,
             questions,
             isGettingOutOfPenaltyBox);
-
-        this.roll = roll;
     }
 
     public create(): Action {
-        if (this.roll % 2 !== 0) {
-            return new GettingOutRoll(this.currentPlayer,
+        if (this.penaltyBox.isIn()) {
+            return new InPenaltyBox(this.currentPlayer,
                 this.names,
                 this.places,
                 this.purses,
                 this.penaltyBox,
                 this.categories,
                 this.questions,
-                this.isGettingOutOfPenaltyBox,
-                this.roll);
+                this.isGettingOutOfPenaltyBox);
         } else {
-            return new PenaltyBoxRoll(this.currentPlayer,
+            return new Correct(this.currentPlayer,
                 this.names,
                 this.places,
                 this.purses,
                 this.penaltyBox,
                 this.categories,
                 this.questions,
-                this.isGettingOutOfPenaltyBox,
-                this.roll);
+                this.isGettingOutOfPenaltyBox);
         }
     }
 

@@ -1,13 +1,13 @@
 import { Action } from "./action";
 import { Base } from "./base";
 import { Categories } from "./categories";
-import { CurrentPlayer } from "./current_player";
-import { PenaltyBox } from "./penalty_box";
-import { PenaltyBoxRollFactory } from "./penalty_box_roll_factory";
+import { CurrentPlayer } from "./current-player";
+import { PenaltyBox } from "./penalty-box";
+import { PenaltyBoxRollFactory } from "./penalty-box-roll-factory";
 import { Places } from "./places";
-import { PlayerNames } from "./player_names";
+import { PlayerNames } from "./player-names";
 import { Purses } from "./purses";
-import { QuestionsByCategory } from "./questions_by_category";
+import { QuestionsByCategory } from "./questions-by-category";
 
 export class RollFactory extends Base {
 

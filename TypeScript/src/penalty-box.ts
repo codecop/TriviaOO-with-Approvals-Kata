@@ -1,6 +1,6 @@
 import { Array6 } from "./array6";
-import { CurrentPlayer } from "./current_player";
-import { PlayerNames } from "./player_names";
+import { CurrentPlayer } from "./current-player";
+import { PlayerNames } from "./player-names";
 
 export class PenaltyBox extends Array6<boolean> {
 

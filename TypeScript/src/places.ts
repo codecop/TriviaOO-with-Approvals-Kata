@@ -1,6 +1,6 @@
-import { CurrentArray } from "./current_array";
-import { CurrentPlayer } from "./current_player";
-import { PlayerNames } from "./player_names";
+import { CurrentArray } from "./current-array";
+import { CurrentPlayer } from "./current-player";
+import { PlayerNames } from "./player-names";
 
 export class Places extends CurrentArray<number> {
 

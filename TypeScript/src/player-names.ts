@@ -1,4 +1,4 @@
-import { CurrentPlayer } from "./current_player";
+import { CurrentPlayer } from "./current-player";
 import { Object } from "./object";
 import { Players } from "./players";
 

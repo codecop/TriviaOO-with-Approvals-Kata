@@ -1,5 +1,5 @@
 import { Array6 } from "./array6";
-import { CurrentPlayer } from "./current_player";
+import { CurrentPlayer } from "./current-player";
 
 export class CurrentArray<T> extends Array6<T> {
 

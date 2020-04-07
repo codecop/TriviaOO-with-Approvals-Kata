@@ -1,14 +1,14 @@
 import { Action } from "./action";
 import { Base } from "./base";
 import { Categories } from "./categories";
-import { CurrentPlayer } from "./current_player";
-import { PenaltyBox } from "./penalty_box";
+import { CurrentPlayer } from "./current-player";
+import { PenaltyBox } from "./penalty-box";
 import { Places } from "./places";
-import { PlayerNames } from "./player_names";
+import { PlayerNames } from "./player-names";
 import { Purses } from "./purses";
-import { QuestionsByCategory } from "./questions_by_category";
+import { QuestionsByCategory } from "./questions-by-category";
 
-export class GettingOutRoll extends Base implements Action {
+export class PenaltyBoxRoll extends Base implements Action {
 
     private roll: number;
 
@@ -36,14 +36,7 @@ export class GettingOutRoll extends Base implements Action {
 
     public execute(): boolean {
         this.println();
-        this.isGettingOutOfPenaltyBox[0] = true;
-
-        this.places.add(this.roll);
-        if (this.places.get(this.currentPlayer.get()) > 11) this.places.set(this.currentPlayer.get(), this.places.get(this.currentPlayer.get()) - 12);
-        this.places.printlnPlace();
-
-        this.categories.println();
-        this.questions.ask();
+        this.isGettingOutOfPenaltyBox[0] = false;
 
         return false;
     }
@@ -51,7 +44,7 @@ export class GettingOutRoll extends Base implements Action {
     private println(): void {
         this.names.println();
         console.log("They have rolled a " + this.roll);
-        console.log(this.names.get() + " is getting out of the penalty box");
+        console.log(this.names.get() + " is not getting out of the penalty box");
     }
 
 }
