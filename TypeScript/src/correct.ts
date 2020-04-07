@@ -40,7 +40,7 @@ export class Correct extends Base implements Action {
     }
 
     private println(): void {
-        console.log("Answer was correct!!!!");
+        console.log("Answer was corrent!!!!");
     }
 
     private didPlayerWin(): boolean {
