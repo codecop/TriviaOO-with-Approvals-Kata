@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{6DF4340A-A044-4593-BC79-8F7961BB91E7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Trivia</RootNamespace>
+    <AssemblyName>Trivia</AssemblyName>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
