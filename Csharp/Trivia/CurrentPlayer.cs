@@ -18,11 +18,8 @@ namespace UglyTrivia
 
         public void Inc()
         {
-            this.currentPlayer = this.currentPlayer + 1;
-            if (this.currentPlayer == this.players.Count())
-            {
-                this.currentPlayer = 0;
-            }
+            this.currentPlayer++;
+            if (this.currentPlayer == this.players.Count()) this.currentPlayer = 0;
         }
     }
 }

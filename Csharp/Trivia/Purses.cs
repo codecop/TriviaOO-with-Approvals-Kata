@@ -25,7 +25,10 @@ namespace UglyTrivia
 
         private void Println()
         {
-            Console.WriteLine(this.names.Get() + " now has " + this.Current() + " Gold Coins.");
+            Console.WriteLine(this.names.Get()
+                + " now has "
+                + this.Current()
+                + " Gold Coins.");
         }
     }
 }
