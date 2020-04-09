@@ -1,3 +1,5 @@
+using System;
+
 namespace UglyTrivia
 {
     public class RockQuestions : Questions
@@ -7,7 +9,7 @@ namespace UglyTrivia
         {
         }
 
-        public string CreateRockQuestion(int index)
+        public String CreateRockQuestion(int index)
         {
             return "Rock Question " + index;
         }

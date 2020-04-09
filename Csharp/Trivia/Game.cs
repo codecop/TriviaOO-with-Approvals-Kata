@@ -1,3 +1,5 @@
+using System;
+
 namespace UglyTrivia
 {
     public class Game
@@ -38,7 +40,7 @@ namespace UglyTrivia
             return (this.players.Count() >= 2);
         }
 
-        public Action GetAdd(string playerName)
+        public Action GetAdd(String playerName)
         {
             return new Add(this.players, this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox, playerName);
         }

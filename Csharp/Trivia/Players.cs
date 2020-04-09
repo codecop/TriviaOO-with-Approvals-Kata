@@ -5,9 +5,9 @@ namespace UglyTrivia
 {
     public class Players
     {
-        internal List<string> elements = new List<string>();
+        internal List<String> elements = new List<String>();
 
-        public void Add(string playerName)
+        public void Add(String playerName)
         {
             this.elements.Add(playerName);
         }

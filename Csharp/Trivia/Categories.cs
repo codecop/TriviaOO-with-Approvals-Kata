@@ -11,7 +11,7 @@ namespace UglyTrivia
             this.places = places;
         }
 
-        public string CurrentCategory()
+        public String CurrentCategory()
         {
             if (this.places.Current() == 0) return "Pop";
             if (this.places.Current() == 4) return "Pop";

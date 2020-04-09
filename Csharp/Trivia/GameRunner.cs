@@ -1,3 +1,4 @@
+using System;
 using UglyTrivia;
 
 namespace Trivia
@@ -6,7 +7,7 @@ namespace Trivia
     {
         private static bool notAWinner;
 
-        public static void Main(string[] args)
+        public static void Main(String[] args)
         {
             System.Random rand = new System.Random();
             Run(rand);
@@ -23,10 +24,10 @@ namespace Trivia
             do
             {
 
-                Action roll = aGame.GetRoll().Create(rand);
+                UglyTrivia.Action roll = aGame.GetRoll().Create(rand);
                 roll.Execute();
 
-                Action answer = aGame.GetAnswer().Create(rand);
+                UglyTrivia.Action answer = aGame.GetAnswer().Create(rand);
                 notAWinner = answer.Execute();
 
 
