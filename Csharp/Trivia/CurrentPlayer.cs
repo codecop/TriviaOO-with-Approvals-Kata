@@ -2,9 +2,9 @@ namespace UglyTrivia
 {
     public class CurrentPlayer
     {
-        internal Players players;
+        Players players;
 
-        internal int currentPlayer = 0;
+        int currentPlayer = 0;
 
         public CurrentPlayer(Players players)
         {
@@ -13,13 +13,13 @@ namespace UglyTrivia
 
         public int Get()
         {
-            return this.currentPlayer;
+            return currentPlayer;
         }
 
         public void Inc()
         {
-            this.currentPlayer++;
-            if (this.currentPlayer == this.players.Count()) this.currentPlayer = 0;
+            currentPlayer++;
+            if (currentPlayer == players.Count()) currentPlayer = 0;
         }
     }
 }

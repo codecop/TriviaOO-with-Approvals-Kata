@@ -12,13 +12,13 @@ namespace UglyTrivia
 
         public Action Create()
         {
-            if (this.roll % 2 != 0)
+            if (roll % 2 != 0)
             {
-                return new GettingOutRoll(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox, this.roll);
+                return new GettingOutRoll(currentPlayer, names, places, purses, penaltyBox, categories, questions, isGettingOutOfPenaltyBox, roll);
             }
             else
             {
-                return new PenaltyBoxRoll(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox, this.roll);
+                return new PenaltyBoxRoll(currentPlayer, names, places, purses, penaltyBox, categories, questions, isGettingOutOfPenaltyBox, roll);
             }
         }
     }

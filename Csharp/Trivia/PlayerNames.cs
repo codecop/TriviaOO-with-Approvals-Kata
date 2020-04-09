@@ -4,21 +4,21 @@ namespace UglyTrivia
 {
     public class PlayerNames : Players
     {
-        internal CurrentPlayer currentPlayer;
+        CurrentPlayer currentPlayer;
 
         public PlayerNames(CurrentPlayer currentPlayer)
         {
             this.currentPlayer = currentPlayer;
         }
 
-        public object Get()
+        public String Get()
         {
-            return this.elements[this.currentPlayer.Get()];
+            return elements[currentPlayer.Get()];
         }
 
         public override void Println()
         {
-            Console.WriteLine(this.Get() + " is the current player");
+            Console.WriteLine(Get() + " is the current player");
         }
     }
 }

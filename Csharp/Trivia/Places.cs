@@ -4,7 +4,7 @@ namespace UglyTrivia
 {
     public class Places : CurrentArray<int>
     {
-        internal PlayerNames names;
+        PlayerNames names;
 
         public Places(CurrentPlayer currentPlayer, PlayerNames names)
             : base(currentPlayer, 0)
@@ -14,14 +14,14 @@ namespace UglyTrivia
 
         public void Add(int roll)
         {
-            this.Set(this.currentPlayer.Get(), this.Current() + roll);
+            Set(currentPlayer.Get(), Current() + roll);
         }
 
         public void PrintlnPlace()
         {
-            Console.WriteLine(this.names.Get()
+            Console.WriteLine(names.Get()
                 + "'s new location is "
-                + this.Current());
+                + Current());
         }
     }
 }

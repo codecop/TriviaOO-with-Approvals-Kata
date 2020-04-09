@@ -14,21 +14,21 @@ namespace UglyTrivia
 
         public bool Execute()
         {
-            this.Println();
-            this.isGettingOutOfPenaltyBox[0] = true;
-            this.places.Add(this.roll);
-            if (this.places.Get(this.currentPlayer.Get()) > 11) this.places.Set(this.currentPlayer.Get(), this.places.Get(this.currentPlayer.Get()) - 12);
-            this.places.PrintlnPlace();
-            this.categories.Println();
-            this.questions.Ask();
+            Println();
+            isGettingOutOfPenaltyBox[0] = true;
+            places.Add(roll);
+            if (places.Get(currentPlayer.Get()) > 11) places.Set(currentPlayer.Get(), places.Get(currentPlayer.Get()) - 12);
+            places.PrintlnPlace();
+            categories.Println();
+            questions.Ask();
             return false;
         }
 
         private void Println()
         {
-            this.names.Println();
-            Console.WriteLine("They have rolled a " + this.roll);
-            Console.WriteLine(this.names.Get() + " is getting out of the penalty box");
+            names.Println();
+            Console.WriteLine("They have rolled a " + roll);
+            Console.WriteLine(names.Get() + " is getting out of the penalty box");
         }
     }
 }

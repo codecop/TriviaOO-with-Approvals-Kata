@@ -12,7 +12,7 @@ namespace UglyTrivia
 
         public T Current()
         {
-            return this.Get(this.currentPlayer.Get());
+            return Get(currentPlayer.Get());
         }
     }
 }

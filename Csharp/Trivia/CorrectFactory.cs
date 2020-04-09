@@ -9,13 +9,13 @@ namespace UglyTrivia
 
         public Action Create()
         {
-            if (this.penaltyBox.IsIn())
+            if (penaltyBox.IsIn())
             {
-                return new InPenaltyBox(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox);
+                return new InPenaltyBox(currentPlayer, names, places, purses, penaltyBox, categories, questions, isGettingOutOfPenaltyBox);
             }
             else
             {
-                return new Correct(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox);
+                return new Correct(currentPlayer, names, places, purses, penaltyBox, categories, questions, isGettingOutOfPenaltyBox);
             }
         }
     }

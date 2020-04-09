@@ -8,18 +8,18 @@ namespace UglyTrivia
         {
             for (int i = 0; i < 6; i++)
             {
-                this.Set(i, init);
+                Set(i, init);
             }
         }
 
         public void Set(int i, T value)
         {
-            this.array[i] = value;
+            array[i] = value;
         }
 
         public T Get(int i)
         {
-            return (T)this.array[i];
+            return (T)array[i];
         }
     }
 }

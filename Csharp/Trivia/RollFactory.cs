@@ -11,15 +11,15 @@ namespace UglyTrivia
 
         public Action Create(Random rand)
         {
-            int roll = this.CalcRoll(rand);
-            if (this.penaltyBox.IsIn())
+            int roll = CalcRoll(rand);
+            if (penaltyBox.IsIn())
             {
-                PenaltyBoxRollFactory factory = new PenaltyBoxRollFactory(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox, roll);
+                PenaltyBoxRollFactory factory = new PenaltyBoxRollFactory(currentPlayer, names, places, purses, penaltyBox, categories, questions, isGettingOutOfPenaltyBox, roll);
                 return factory.Create();
             }
             else
             {
-                return new Roll(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox, roll);
+                return new Roll(currentPlayer, names, places, purses, penaltyBox, categories, questions, isGettingOutOfPenaltyBox, roll);
             }
         }
 

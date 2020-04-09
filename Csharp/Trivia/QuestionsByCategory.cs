@@ -2,13 +2,13 @@ namespace UglyTrivia
 {
     public class QuestionsByCategory
     {
-        internal Questions popQuestions = new PopQuestions();
+        Questions popQuestions = new PopQuestions();
 
-        internal Questions scienceQuestions = new ScienceQuestions();
+        Questions scienceQuestions = new ScienceQuestions();
 
-        internal Questions sportsQuestions = new SportsQuestions();
+        Questions sportsQuestions = new SportsQuestions();
 
-        internal Questions rockQuestions = new RockQuestions();
+        Questions rockQuestions = new RockQuestions();
 
         private Categories categories;
 
@@ -17,23 +17,23 @@ namespace UglyTrivia
             this.categories = categories;
         }
 
-        public virtual void Ask()
+        public void Ask()
         {
-            if (this.categories.CurrentCategory() == "Pop")
+            if (categories.CurrentCategory() == "Pop")
             {
-                this.popQuestions.AskQuestion();
+                popQuestions.AskQuestion();
             }
-            if (this.categories.CurrentCategory() == "Science")
+            if (categories.CurrentCategory() == "Science")
             {
-                this.scienceQuestions.AskQuestion();
+                scienceQuestions.AskQuestion();
             }
-            if (this.categories.CurrentCategory() == "Sports")
+            if (categories.CurrentCategory() == "Sports")
             {
-                this.sportsQuestions.AskQuestion();
+                sportsQuestions.AskQuestion();
             }
-            if (this.categories.CurrentCategory() == "Rock")
+            if (categories.CurrentCategory() == "Rock")
             {
-                this.rockQuestions.AskQuestion();
+                rockQuestions.AskQuestion();
             }
         }
     }

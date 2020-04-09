@@ -11,16 +11,16 @@ namespace UglyTrivia
 
         public bool Execute()
         {
-            this.Println();
-            this.penaltyBox.Set(this.currentPlayer.Get(), true);
-            this.currentPlayer.Inc();
+            Println();
+            penaltyBox.Set(currentPlayer.Get(), true);
+            currentPlayer.Inc();
             return true;
         }
 
         private void Println()
         {
             Console.WriteLine("Question was incorrectly answered");
-            this.penaltyBox.Println();
+            penaltyBox.Println();
         }
     }
 }

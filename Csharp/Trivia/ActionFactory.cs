@@ -14,24 +14,24 @@ namespace UglyTrivia
             Action action;
             if (rand.Next(9) == 7)
             {
-                action = this.WrongAnswer();
+                action = WrongAnswer();
             }
             else
             {
-                action = this.WasCorrectlyAnswered();
+                action = WasCorrectlyAnswered();
             }
             return action;
         }
 
         public Action WasCorrectlyAnswered()
         {
-            CorrectFactory factory = new CorrectFactory(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox);
+            CorrectFactory factory = new CorrectFactory(currentPlayer, names, places, purses, penaltyBox, categories, questions, isGettingOutOfPenaltyBox);
             return factory.Create();
         }
 
         public Action WrongAnswer()
         {
-            return new Wrong(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox);
+            return new Wrong(currentPlayer, names, places, purses, penaltyBox, categories, questions, isGettingOutOfPenaltyBox);
         }
     }
 }

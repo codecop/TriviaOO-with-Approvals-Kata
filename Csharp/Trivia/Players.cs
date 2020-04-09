@@ -9,28 +9,28 @@ namespace UglyTrivia
 
         public void Add(String playerName)
         {
-            this.elements.Add(playerName);
+            elements.Add(playerName);
         }
 
         public virtual void Println()
         {
-            this.PrintlnAdded();
-            this.PrintlnNum();
+            PrintlnAdded();
+            PrintlnNum();
         }
 
         private void PrintlnAdded()
         {
-            Console.WriteLine(this.elements[this.elements.Count - 1] + " was added");
+            Console.WriteLine(elements[elements.Count - 1] + " was added");
         }
 
         private void PrintlnNum()
         {
-            Console.WriteLine("They are player number " + this.Count());
+            Console.WriteLine("They are player number " + Count());
         }
 
         public int Count()
         {
-            return this.elements.Count;
+            return elements.Count;
         }
     }
 }

@@ -11,17 +11,17 @@ namespace UglyTrivia
 
         public bool Execute()
         {
-            if (this.isGettingOutOfPenaltyBox[0])
+            if (isGettingOutOfPenaltyBox[0])
             {
-                this.Println();
-                this.purses.Inc();
-                bool winner = this.DidPlayerWin();
-                this.currentPlayer.Inc();
+                Println();
+                purses.Inc();
+                bool winner = DidPlayerWin();
+                currentPlayer.Inc();
                 return winner;
             }
             else
             {
-                this.currentPlayer.Inc();
+                currentPlayer.Inc();
                 return true;
             }
         }
@@ -33,7 +33,7 @@ namespace UglyTrivia
 
         private bool DidPlayerWin()
         {
-            return !(this.purses.Current() == 6);
+            return !(purses.Current() == 6);
         }
     }
 }

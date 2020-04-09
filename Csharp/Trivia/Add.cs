@@ -17,12 +17,12 @@ namespace UglyTrivia
 
         public bool Execute()
         {
-            this.players.Add(this.playerName);
-            this.names.Add(this.playerName);
-            this.places.Set(this.players.Count(), 0);
-            this.purses.Set(this.players.Count(), 0);
-            this.penaltyBox.Set(this.players.Count(), false);
-            this.players.Println();
+            players.Add(playerName);
+            names.Add(playerName);
+            places.Set(players.Count(), 0);
+            purses.Set(players.Count(), 0);
+            penaltyBox.Set(players.Count(), false);
+            players.Println();
             return true;
         }
     }

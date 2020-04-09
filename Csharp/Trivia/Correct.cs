@@ -11,10 +11,10 @@ namespace UglyTrivia
 
         public bool Execute()
         {
-            this.Println();
-            this.purses.Inc();
-            bool winner = this.DidPlayerWin();
-            this.currentPlayer.Inc();
+            Println();
+            purses.Inc();
+            bool winner = DidPlayerWin();
+            currentPlayer.Inc();
             return winner;
         }
 
@@ -25,7 +25,7 @@ namespace UglyTrivia
 
         private bool DidPlayerWin()
         {
-            return !(this.purses.Current() == 6);
+            return !(purses.Current() == 6);
         }
     }
 }

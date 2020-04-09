@@ -14,16 +14,16 @@ namespace UglyTrivia
 
         public bool Execute()
         {
-            this.Println();
-            this.isGettingOutOfPenaltyBox[0] = false;
+            Println();
+            isGettingOutOfPenaltyBox[0] = false;
             return false;
         }
 
         private void Println()
         {
-            this.names.Println();
-            Console.WriteLine("They have rolled a " + this.roll);
-            Console.WriteLine(this.names.Get() + " is not getting out of the penalty box");
+            names.Println();
+            Console.WriteLine("They have rolled a " + roll);
+            Console.WriteLine(names.Get() + " is not getting out of the penalty box");
         }
     }
 }

@@ -4,7 +4,7 @@ namespace UglyTrivia
 {
     public class Purses : CurrentArray<int>
     {
-        internal PlayerNames names;
+        PlayerNames names;
 
         public Purses(CurrentPlayer currentPlayer, PlayerNames names)
             : base(currentPlayer, 0)
@@ -14,20 +14,20 @@ namespace UglyTrivia
 
         public void Inc()
         {
-            this.Add();
-            this.Println();
+            Add();
+            Println();
         }
 
         private void Add()
         {
-            this.Set(this.currentPlayer.Get(), this.Current() + 1);
+            Set(currentPlayer.Get(), Current() + 1);
         }
 
         private void Println()
         {
-            Console.WriteLine(this.names.Get()
+            Console.WriteLine(names.Get()
                 + " now has "
-                + this.Current()
+                + Current()
                 + " Gold Coins.");
         }
     }

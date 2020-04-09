@@ -5,7 +5,7 @@ namespace UglyTrivia
 {
     public class Questions
     {
-        internal LinkedList<String> popQuestions = new LinkedList<String>();
+        LinkedList<String> popQuestions = new LinkedList<String>();
 
         public Questions(String prefix)
         {
