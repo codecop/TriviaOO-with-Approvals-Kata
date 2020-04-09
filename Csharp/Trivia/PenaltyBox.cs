@@ -15,12 +15,12 @@ namespace UglyTrivia
             this.names = names;
         }
 
-        public virtual bool IsIn()
+        public bool IsIn()
         {
             return this.Get(this.currentPlayer.Get());
         }
 
-        public virtual void Println()
+        public void Println()
         {
             Console.WriteLine(this.names.Get() + " was sent to the penalty box");
         }

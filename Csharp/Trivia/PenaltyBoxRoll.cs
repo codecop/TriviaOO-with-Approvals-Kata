@@ -12,7 +12,7 @@ namespace UglyTrivia
             this.roll = roll;
         }
 
-        public virtual bool Execute()
+        public bool Execute()
         {
             this.Println();
             this.isGettingOutOfPenaltyBox[0] = false;

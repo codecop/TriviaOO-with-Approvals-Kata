@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace UglyTrivia
 {
     public class Players
     {
-        internal ArrayList elements = new ArrayList();
+        internal List<string> elements = new List<string>();
 
-        public virtual void Add(string playerName)
+        public void Add(string playerName)
         {
             this.elements.Add(playerName);
         }
@@ -28,7 +29,7 @@ namespace UglyTrivia
             Console.WriteLine("They are player number " + this.Count());
         }
 
-        public virtual int Count()
+        public int Count()
         {
             return this.elements.Count;
         }

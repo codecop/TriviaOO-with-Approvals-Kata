@@ -13,7 +13,7 @@ namespace UglyTrivia
             this.playerName = playerName;
         }
 
-        public virtual bool Execute()
+        public bool Execute()
         {
             this.players.Add(this.playerName);
             this.names.Add(this.playerName);

@@ -11,7 +11,7 @@ namespace UglyTrivia
             this.currentPlayer = currentPlayer;
         }
 
-        public virtual object Get()
+        public object Get()
         {
             return this.elements[this.currentPlayer.Get()];
         }

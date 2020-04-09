@@ -1,25 +1,24 @@
 using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace UglyTrivia
 {
     public class Questions
     {
-        internal ArrayList popQuestions = new ArrayList();
+        internal LinkedList<string> popQuestions = new LinkedList<string>();
 
         public Questions(string prefix)
         {
             for (int i = 0; i < 50; i++)
             {
-                this.popQuestions.Add(prefix + " Question " + i);
+                popQuestions.AddLast(prefix + " Question " + i);
             }
         }
 
-        public virtual void AskQuestion()
+        public void AskQuestion()
         {
-            var question = this.popQuestions[0];
-            this.popQuestions.RemoveAt(0);
-            Console.WriteLine(question);
+            Console.WriteLine(popQuestions.First.Value);
+            popQuestions.RemoveFirst();
         }
     }
 }

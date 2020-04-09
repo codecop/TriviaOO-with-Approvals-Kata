@@ -33,22 +33,22 @@ namespace UglyTrivia
             isGettingOutOfPenaltyBox = new bool[1];
         }
 
-        public virtual bool IsPlayable()
+        public bool IsPlayable()
         {
             return (this.players.Count() >= 2);
         }
 
-        public virtual Action GetAdd(string playerName)
+        public Action GetAdd(string playerName)
         {
             return new Add(this.players, this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox, playerName);
         }
 
-        public virtual RollFactory GetRoll()
+        public RollFactory GetRoll()
         {
             return new RollFactory(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox);
         }
 
-        public virtual ActionFactory GetAnswer()
+        public ActionFactory GetAnswer()
         {
             return new ActionFactory(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox);
         }

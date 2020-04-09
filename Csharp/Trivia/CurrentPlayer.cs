@@ -11,12 +11,12 @@ namespace UglyTrivia
             this.players = players;
         }
 
-        public virtual int Get()
+        public int Get()
         {
             return this.currentPlayer;
         }
 
-        public virtual void Inc()
+        public void Inc()
         {
             this.currentPlayer = this.currentPlayer + 1;
             if (this.currentPlayer == this.players.Count())

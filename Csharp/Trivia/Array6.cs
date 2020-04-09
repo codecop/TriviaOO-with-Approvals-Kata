@@ -12,12 +12,12 @@ namespace UglyTrivia
             }
         }
 
-        public virtual void Set(int i, T value)
+        public void Set(int i, T value)
         {
             this.array[i] = value;
         }
 
-        public virtual T Get(int i)
+        public T Get(int i)
         {
             return (T)this.array[i];
         }

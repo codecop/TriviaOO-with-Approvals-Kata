@@ -9,7 +9,7 @@ namespace UglyTrivia
         {
         }
 
-        public virtual bool Execute()
+        public bool Execute()
         {
             this.Println();
             this.penaltyBox.Set(this.currentPlayer.Get(), true);

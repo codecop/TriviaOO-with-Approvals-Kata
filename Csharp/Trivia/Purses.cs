@@ -12,7 +12,7 @@ namespace UglyTrivia
             this.names = names;
         }
 
-        public virtual void Inc()
+        public void Inc()
         {
             this.Add();
             this.Println();

@@ -9,7 +9,7 @@ namespace UglyTrivia
         {
         }
 
-        public virtual bool Execute()
+        public bool Execute()
         {
             if (this.isGettingOutOfPenaltyBox[0])
             {

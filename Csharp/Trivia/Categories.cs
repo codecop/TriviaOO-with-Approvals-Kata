@@ -11,7 +11,7 @@ namespace UglyTrivia
             this.places = places;
         }
 
-        public virtual string CurrentCategory()
+        public string CurrentCategory()
         {
             if (this.places.Current() == 0)
             {
@@ -52,7 +52,7 @@ namespace UglyTrivia
             return "Rock";
         }
 
-        public virtual void Println()
+        public void Println()
         {
             Console.WriteLine("The category is " + this.CurrentCategory());
         }

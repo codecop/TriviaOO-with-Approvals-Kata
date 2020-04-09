@@ -9,7 +9,7 @@ namespace UglyTrivia
         {
         }
 
-        public virtual Action Create(Random rand)
+        public Action Create(Random rand)
         {
             Action action;
             if (rand.Next(9) == 7)
@@ -23,13 +23,13 @@ namespace UglyTrivia
             return action;
         }
 
-        public virtual Action WasCorrectlyAnswered()
+        public Action WasCorrectlyAnswered()
         {
             CorrectFactory factory = new CorrectFactory(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox);
             return factory.Create();
         }
 
-        public virtual Action WrongAnswer()
+        public Action WrongAnswer()
         {
             return new Wrong(this.currentPlayer, this.names, this.places, this.purses, this.penaltyBox, this.categories, this.questions, this.isGettingOutOfPenaltyBox);
         }

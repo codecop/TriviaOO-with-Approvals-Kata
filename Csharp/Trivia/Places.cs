@@ -12,12 +12,12 @@ namespace UglyTrivia
             this.names = names;
         }
 
-        public virtual void Add(int roll)
+        public void Add(int roll)
         {
             this.Set(this.currentPlayer.Get(), this.Current() + roll);
         }
 
-        public virtual void PrintlnPlace()
+        public void PrintlnPlace()
         {
             Console.WriteLine(this.names.Get() + "'s new location is " + this.Current());
         }

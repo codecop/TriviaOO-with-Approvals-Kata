@@ -7,7 +7,7 @@ namespace UglyTrivia
         {
         }
 
-        public virtual Action Create()
+        public Action Create()
         {
             if (this.penaltyBox.IsIn())
             {

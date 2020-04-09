@@ -10,7 +10,7 @@ namespace UglyTrivia
             this.currentPlayer = currentPlayer;
         }
 
-        public virtual T Current()
+        public T Current()
         {
             return this.Get(this.currentPlayer.Get());
         }

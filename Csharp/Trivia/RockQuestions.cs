@@ -7,7 +7,7 @@ namespace UglyTrivia
         {
         }
 
-        public virtual string CreateRockQuestion(int index)
+        public string CreateRockQuestion(int index)
         {
             return "Rock Question " + index;
         }

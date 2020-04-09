@@ -9,7 +9,7 @@ namespace UglyTrivia
         {
         }
 
-        public virtual Action Create(Random rand)
+        public Action Create(Random rand)
         {
             int roll = this.CalcRoll(rand);
             if (this.penaltyBox.IsIn())

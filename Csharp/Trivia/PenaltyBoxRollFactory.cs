@@ -10,7 +10,7 @@ namespace UglyTrivia
             this.roll = roll;
         }
 
-        public virtual Action Create()
+        public Action Create()
         {
             if (this.roll % 2 != 0)
             {
