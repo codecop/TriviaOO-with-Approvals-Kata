@@ -17,10 +17,7 @@ namespace UglyTrivia
             this.Println();
             this.isGettingOutOfPenaltyBox[0] = true;
             this.places.Add(this.roll);
-            if (this.places.Get(this.currentPlayer.Get()) > 11)
-            {
-                this.places.Set(this.currentPlayer.Get(), this.places.Get(this.currentPlayer.Get()) - 12);
-            }
+            if (this.places.Get(this.currentPlayer.Get()) > 11) this.places.Set(this.currentPlayer.Get(), this.places.Get(this.currentPlayer.Get()) - 12);
             this.places.PrintlnPlace();
             this.categories.Println();
             this.questions.Ask();

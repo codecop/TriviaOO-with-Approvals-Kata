@@ -19,7 +19,9 @@ namespace UglyTrivia
 
         public void PrintlnPlace()
         {
-            Console.WriteLine(this.names.Get() + "'s new location is " + this.Current());
+            Console.WriteLine(this.names.Get()
+                + "'s new location is "
+                + this.Current());
         }
     }
 }
